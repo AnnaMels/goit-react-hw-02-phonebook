@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { List } from './ContactsList.styled';
 import { Button } from './ContactsList.styled';
 import { ListItem } from './ContactsList.styled';
@@ -15,4 +16,10 @@ export default function ContactsList({ contacts, filter, deleteHandler }) {
             })}
         </List>
     )
-}
+};
+
+ContactsList.propTypes = {
+    contacts: PropTypes.array,
+    filter: PropTypes.string,
+    deleteHandler: PropTypes.func
+};

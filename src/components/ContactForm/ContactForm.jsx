@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm.styled';
@@ -10,6 +11,12 @@ export default class Form extends Component {
         name: '',
         number: ''
     };
+
+    static propTypes = {
+        name: PropTypes.string,
+        number: PropTypes.number
+    };
+
 
     handleNameInfo = e => {
         this.setState({ [e.target.name]: e.target.value });

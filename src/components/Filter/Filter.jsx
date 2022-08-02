@@ -1,4 +1,6 @@
-import { Label } from './Filter.styled'; 
+import PropTypes from "prop-types";
+import { Label } from './Filter.styled';
+
 export default function Filter({ handleFilter }) {
     return (
         <Label>Find contacts by name
@@ -9,3 +11,7 @@ export default function Filter({ handleFilter }) {
         </Label>
     );
 };
+
+Filter.propTypes = {
+    handleFilter: PropTypes.func
+}

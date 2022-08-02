@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Component } from 'react';
 import Form from '../ContactForm';
 import ContactList from '../ContactsList';
@@ -11,7 +12,16 @@ export class App extends Component {
         filter: ''
       }
   
-      
+  static propTypes = {
+    contacts: PropTypes.array,
+    filter: PropTypes.string,
+    newContact: PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.number
+    })
+  } 
+  
   addContact = (newContact) => {
     this.setState((prevState) => ({
       contacts: [...prevState.contacts, newContact]
