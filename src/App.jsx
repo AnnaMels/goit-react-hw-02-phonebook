@@ -1,9 +1,9 @@
 import { Component } from 'react';
-import Form from '../ContactForm';
-import ContactList from '../ContactsList';
-import Filter from '../Filter';
-import { PhonebookTitle } from './App.styles';
-import { ContactsTitle } from './App.styles';
+import Form from './components/ContactForm';
+import ContactList from './components/ContactsList';
+import Filter from './components/Filter';
+import { PhonebookTitle } from './components/App/App.styles';
+import { ContactsTitle } from './components/App/App.styles';
 
 export class App extends Component {
       state = {
